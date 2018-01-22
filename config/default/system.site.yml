@@ -1,0 +1,14 @@
+uuid: c6af23c5-f2eb-4842-81cf-c6ddd2432773
+name: 'Dragos Dumitrescu'
+mail: dumitrescu.dragos1@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

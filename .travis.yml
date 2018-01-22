@@ -1,0 +1,71 @@
+sudo: false
+language: php
+dist: trusty
+php: 7.1
+matrix:
+  fast_finish: true
+env:
+  global:
+  - COMPOSER_BIN=$TRAVIS_BUILD_DIR/vendor/bin
+  - BLT_DIR=$TRAVIS_BUILD_DIR/vendor/acquia/blt
+  - BUILD_DIR=$TRAVIS_BUILD_DIR
+jdk:
+- oraclejdk8
+cache:
+  bundler: true
+  apt: true
+  directories:
+  - "$HOME/.composer/cache"
+  - "$HOME/.drush/cache"
+  - "$HOME/.npm"
+  - "$HOME/.nvm"
+  - vendor
+addons:
+  chrome: stable
+# TODO set this according to your project
+branches:
+  only:
+  - master
+  - develop
+notifications:
+  slack:
+    rooms:
+# TODO Use a secure key for slack generated with travis client
+#      secure: verylonghasedstring
+before_install:
+# TODO set this according to your project
+#- ssh-keyscan -p <PORT> -t rsa,dsa,ecdsa,ED25519 -H <DOMAIN> 2>&1 | tee -a $HOME/.ssh/known_hosts
+#- ssh-keyscan -t rsa,dsa,ecdsa,ED25519 -H gitlab.com 2>&1 | tee -a $HOME/.ssh/known_hosts
+# TODO Encrypt file with travis client ie: travis encrypt-file travis_deploy_rsa --org --add
+#- openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv
+#  -in travis_deploy_rsa.enc -out ~/.ssh/id_rsa -d
+#- chmod 400 ~/.ssh/id_rsa
+- phpenv config-rm xdebug.ini
+- composer self-update
+- composer validate --no-check-all --ansi
+- composer install
+- source ${BLT_DIR}/scripts/travis/exit_early
+install:
+- source ${BLT_DIR}/scripts/travis/setup_environment
+- source ${BLT_DIR}/scripts/travis/setup_project
+script:
+- source ${BLT_DIR}/scripts/travis/run_tests
+deploy:
+- provider: script
+  script: "${BLT_DIR}/scripts/travis/deploy_branch"
+  skip_cleanup: true
+  on:
+    branch: develop
+    php: 7.1
+- provider: script
+  script: "${BLT_DIR}/scripts/travis/deploy_branch"
+  skip_cleanup: true
+  on:
+    branch: master
+    php: 7.1
+#- provider: script
+#  script: "${BLT_DIR}/scripts/travis/deploy_tag"
+#  skip_cleanup: true
+#  on:
+#    tags: true
+#    php: 5.6
