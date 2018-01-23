@@ -1,4 +1,4 @@
-uuid: dfa320e3-60a0-47a9-96b7-ffdfe83b6d5a
+uuid: 7bf1f3c5-d491-413f-b50e-dec2cef2ec48
 langcode: en
 status: false
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - slick
 _core:
-  default_config_hash: k7CsIh1fcue1aRGoNiJjnlNH9KHBttIn-kH6Di03wL0
+  default_config_hash: Zyx4BsKtbNFnRU7WTHAF0DGHMenI0b_Czn4dwl1bQTc
 id: default
 name: default
 label: Default

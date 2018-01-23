@@ -1,14 +1,15 @@
-uuid: c6af23c5-f2eb-4842-81cf-c6ddd2432773
+uuid: 352b1c8e-ef07-4f7f-aaae-045a66ecd88b
 name: 'Dragos Dumitrescu'
 mail: dumitrescu.dragos1@gmail.com
-slogan: ''
+slogan: 'Drupal developer'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/9
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

@@ -1,4 +1,4 @@
-uuid: bc1a1a9a-97bf-4013-8ad2-0fbf81990658
+uuid: 06631c05-bcbe-4f81-bb61-2b53bad7d544
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: 8mYO8ewsZX3LVfNga69jXa0RNO0LNN8-EGkXLhSAMBU
+  default_config_hash: 17l0KUr0DlwPGChm_Iu_HpGdkNgU3nFR9cP6q05z4Ko
 id: state_codes
 label: 'State codes'
 category: Geographic

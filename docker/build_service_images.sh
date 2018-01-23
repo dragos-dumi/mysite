@@ -36,8 +36,8 @@ docker build \
 cd $ROOT_DIR/php-cli
 # Copy deploy files to the image dir
 docker build \
-  --tag ${DOCKER_REPO}/mysite-php-fpm:${BUILD_NUMBER} \
-  --tag ${DOCKER_REPO}/mysite-php-fpm:latest \
+  --tag ${DOCKER_REPO}/mysite-php-cli:${BUILD_NUMBER} \
+  --tag ${DOCKER_REPO}/mysite-php-cli:latest \
   .
 
 # Move back to ROOT_DIR

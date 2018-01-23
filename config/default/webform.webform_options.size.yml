@@ -1,4 +1,4 @@
-uuid: 0112dd59-c6e4-4a07-820a-8594a6e17e10
+uuid: 68368f91-f2d5-4163-9444-c6cb9c4e864f
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: RKkc6tf1VudvYiOtwPCf3Tp_EoA6fov6BFC34D7gMoQ
+  default_config_hash: Xov05v5Uq4t3ek0hXVcvr83sYGxDkMP3qG01pzendv8
 id: size
 label: Size
 category: General

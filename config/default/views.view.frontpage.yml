@@ -1,4 +1,4 @@
-uuid: 482b4c93-8a9a-429e-a450-d027aba3adc4
+uuid: 67b95dd2-c0c6-4712-8398-80e869a9d479
 langcode: en
 status: true
 dependencies:
@@ -261,8 +261,8 @@ display:
       sitename_title: true
       path: rss.xml
       displays:
-        default: '0'
-        page_1: '0'
+        page_1: page_1
+        default: ''
       pager:
         type: some
         options:

@@ -798,28 +798,6 @@ if (empty($_ENV['MYSQL_DATABASE'])) {
   $_ENV['HASH_SALT'] = $vars['HASH_SALT'];
 }
 
-/**
- * Database configuration.
- */
-if (!empty($_ENV['MYSQL_DATABASE'])) {
-  $databases = array(
-    'default' =>
-      array(
-        'default' =>
-          array(
-            'database' => $_ENV['MYSQL_DATABASE'],
-            'username' => $_ENV['MYSQL_USER'],
-            'password' => $_ENV['MYSQL_PASSWORD'],
-            'host' => $_ENV['MYSQL_HOST'],
-            'port' => $_ENV['MYSQL_PORT'],
-            'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-            'driver' => 'mysql',
-            'prefix' => '',
-          ),
-      ),
-  );
-}
-
 $settings['hash_salt'] = $_ENV['HASH_SALT'];
 
 $dir = dirname(DRUPAL_ROOT);
@@ -851,6 +829,28 @@ if (isset($_ENV['REDIS_HOST'])) {
 }
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+
+/**
+ * Database configuration.
+ */
+if (!empty($_ENV['MYSQL_DATABASE'])) {
+  $databases = array(
+    'default' =>
+      array(
+        'default' =>
+          array(
+            'database' => $_ENV['MYSQL_DATABASE'],
+            'username' => $_ENV['MYSQL_USER'],
+            'password' => $_ENV['MYSQL_PASSWORD'],
+            'host' => $_ENV['MYSQL_HOST'],
+            'port' => $_ENV['MYSQL_PORT'],
+            'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+            'driver' => 'mysql',
+            'prefix' => '',
+          ),
+      ),
+  );
+}
 
 //$config_directories['sync'] = '../config/sync';
 // Assume that is always test/development env.

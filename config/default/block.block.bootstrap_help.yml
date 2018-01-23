@@ -1,4 +1,4 @@
-uuid: e0a34940-4add-4f7f-b6a0-d379d613ac03
+uuid: c2454244-0bfc-4a07-ad19-292f26376525
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_help
 theme: bootstrap
 region: help
-weight: -6
+weight: -30
 provider: null
 plugin: help_block
 settings:

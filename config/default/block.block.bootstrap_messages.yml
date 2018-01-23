@@ -1,4 +1,4 @@
-uuid: 646b077b-a784-4cf4-ba56-9fd010284e2d
+uuid: db33ddee-c7ec-490a-a12a-379154f8f054
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_messages
 theme: bootstrap
 region: header
-weight: -6
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:

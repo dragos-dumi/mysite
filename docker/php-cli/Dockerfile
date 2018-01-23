@@ -45,6 +45,8 @@ RUN cd /tmp \
   && docker-php-ext-enable memcached \
   && ls -la /usr/local/etc/php/conf.d/
 
+RUN docker-php-ext-install sockets
+
 # See https://secure.php.net/manual/en/opcache.installation.php
 RUN { \
     echo 'opcache.memory_consumption=128'; \

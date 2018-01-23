@@ -1,4 +1,4 @@
-uuid: 031e4d9a-fc15-4618-bc6a-c0919e13c848
+uuid: 91ab39f3-acbd-4428-a183-f3c7113062d9
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_powered
 theme: bootstrap
 region: footer
-weight: -6
+weight: -10
 provider: null
 plugin: system_powered_by_block
 settings:

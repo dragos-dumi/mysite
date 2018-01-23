@@ -12,7 +12,7 @@ git:
   remotes:
     - 'git@github.com:dragos-dumi/mysite-artifact.git'
   validation:
-    commit-msg: { pattern: /\/, example: 'Example: Added new image field for news' }
+    commit-msg: { pattern: /(.*?)/, example: 'Example: Added new image field for news' }
   user:
     name: 'Dragos Dumitrescu'
     email: ci@no-reply.org

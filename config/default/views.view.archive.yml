@@ -1,6 +1,6 @@
-uuid: 811d78f1-d7b2-4207-9742-477719f98a32
+uuid: 074c1025-b9ac-494d-8948-9d91ae9b450b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -212,7 +212,6 @@ display:
           plugin_id: date_year_month
           entity_type: node
       display_extenders: {  }
-      block_hide_empty: true
     cache_metadata:
       contexts:
         - 'languages:language_interface'

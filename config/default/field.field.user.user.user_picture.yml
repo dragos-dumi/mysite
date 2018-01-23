@@ -1,4 +1,4 @@
-uuid: 08aad0a3-e547-4015-b5c1-58888600df4e
+uuid: 26c3c6d0-a350-45c4-93e5-334a424d0b77
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: user
 label: Picture
 description: 'Your virtual face or picture.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
