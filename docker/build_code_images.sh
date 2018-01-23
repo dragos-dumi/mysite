@@ -12,6 +12,9 @@ cd $ROOT_DIR
 
 DOCKER_REPO="dragosdumi"
 
+# Build the PHP-FPM image
+cd $ROOT_DIR/app-image
+
 # Update deploy directory.
 if [ -d "deploy" ]; then
   cd deploy
@@ -20,11 +23,9 @@ else
   git clone git@github.com:dragos-dumi/mysite-artifact.git deploy
 fi
 
-# Build the PHP-FPM image
-cd $ROOT_DIR/mysite-app-image
+cd $ROOT_DIR/app-image
+
 # Copy deploy files to the image dir
-rm -rf deploy
-cp -R ../deploy ./
 docker build \
   --tag ${DOCKER_REPO}/mysite-app-image:${BUILD_NUMBER} \
   --tag ${DOCKER_REPO}/mysite-app-image:latest \
