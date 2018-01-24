@@ -12,8 +12,10 @@ project.local.yml
 # Ignore drupal core.
 docroot/core
 
-# Ignore any sql
+ Ignore any sql
 *.sql
+
+vault.password
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files/*

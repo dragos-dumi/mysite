@@ -31,7 +31,7 @@ docker build \
   --tag ${DOCKER_REPO}/mysite-app-image:latest \
   .
 # Clean files after build
-rm -rf deploy
+#rm -rf deploy
 
 # Move back to ROOT_DIR
 cd $ROOT_DIR
