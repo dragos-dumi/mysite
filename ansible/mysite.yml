@@ -6,6 +6,7 @@
     - { role: geerlingguy.firewall, tags: security }
     - { role: geerlingguy.security, tags: security }
     - { role: geerlingguy.docker, tags: docker }
+    - { role: geerlingguy.docker, tags: docker }
   tasks:
 
     - name: set timezone to Europe/Bucharest
